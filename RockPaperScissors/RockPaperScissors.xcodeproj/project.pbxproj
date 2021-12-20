@@ -10,6 +10,10 @@
 		04928ABD2770ECB80043D653 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04928ABC2770ECB80043D653 /* Roboto-Light.ttf */; };
 		04928ABF2770EE5C0043D653 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04928ABE2770EE5C0043D653 /* Roboto-Thin.ttf */; };
 		04928AC12770F1E60043D653 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04928AC02770F1E60043D653 /* Roboto-Black.ttf */; };
+		04928AC32770FEAC0043D653 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928AC22770FEAC0043D653 /* HostViewController.swift */; };
+		04928AC52770FEBC0043D653 /* GuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928AC42770FEBC0043D653 /* GuestViewController.swift */; };
+		04928AC72770FECF0043D653 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928AC62770FECF0043D653 /* ChooseViewController.swift */; };
+		04928AC92770FED90043D653 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04928AC82770FED90043D653 /* ResultViewController.swift */; };
 		04C7DF0B2770A1380081BD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DF0A2770A1380081BD0E /* AppDelegate.swift */; };
 		04C7DF0D2770A1380081BD0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DF0C2770A1380081BD0E /* SceneDelegate.swift */; };
 		04C7DF0F2770A1380081BD0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DF0E2770A1380081BD0E /* ViewController.swift */; };
@@ -24,6 +28,10 @@
 		04928ABC2770ECB80043D653 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		04928ABE2770EE5C0043D653 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		04928AC02770F1E60043D653 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		04928AC22770FEAC0043D653 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		04928AC42770FEBC0043D653 /* GuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewController.swift; sourceTree = "<group>"; };
+		04928AC62770FECF0043D653 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		04928AC82770FED90043D653 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		04C7DF072770A1380081BD0E /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C7DF0A2770A1380081BD0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C7DF0C2770A1380081BD0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +98,10 @@
 				04C7DF182770A1390081BD0E /* Info.plist */,
 				04C7DF1E2770B3640081BD0E /* GoogleService-Info.plist */,
 				04928ABB2770EC6D0043D653 /* fonts */,
+				04928AC22770FEAC0043D653 /* HostViewController.swift */,
+				04928AC42770FEBC0043D653 /* GuestViewController.swift */,
+				04928AC62770FECF0043D653 /* ChooseViewController.swift */,
+				04928AC82770FED90043D653 /* ResultViewController.swift */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -230,9 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04928AC52770FEBC0043D653 /* GuestViewController.swift in Sources */,
+				04928AC32770FEAC0043D653 /* HostViewController.swift in Sources */,
+				04928AC92770FED90043D653 /* ResultViewController.swift in Sources */,
 				04C7DF0F2770A1380081BD0E /* ViewController.swift in Sources */,
 				04C7DF0B2770A1380081BD0E /* AppDelegate.swift in Sources */,
 				04C7DF0D2770A1380081BD0E /* SceneDelegate.swift in Sources */,
+				04928AC72770FECF0043D653 /* ChooseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
