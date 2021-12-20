@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04928ABD2770ECB80043D653 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04928ABC2770ECB80043D653 /* Roboto-Light.ttf */; };
 		04C7DF0B2770A1380081BD0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DF0A2770A1380081BD0E /* AppDelegate.swift */; };
 		04C7DF0D2770A1380081BD0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DF0C2770A1380081BD0E /* SceneDelegate.swift */; };
 		04C7DF0F2770A1380081BD0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7DF0E2770A1380081BD0E /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04928ABC2770ECB80043D653 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		04C7DF072770A1380081BD0E /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C7DF0A2770A1380081BD0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C7DF0C2770A1380081BD0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04928ABB2770EC6D0043D653 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04928ABC2770ECB80043D653 /* Roboto-Light.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		04C7DEFE2770A1380081BD0E = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 				04C7DF152770A1390081BD0E /* LaunchScreen.storyboard */,
 				04C7DF182770A1390081BD0E /* Info.plist */,
 				04C7DF1E2770B3640081BD0E /* GoogleService-Info.plist */,
+				04928ABB2770EC6D0043D653 /* fonts */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
@@ -91,7 +102,6 @@
 				7669169AAECDCDB3722D2D8C /* Pods-RockPaperScissors.debug.xcconfig */,
 				9D6C6A28253185B616D13B79 /* Pods-RockPaperScissors.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +167,7 @@
 			files = (
 				04C7DF172770A1390081BD0E /* LaunchScreen.storyboard in Resources */,
 				04C7DF1F2770B3640081BD0E /* GoogleService-Info.plist in Resources */,
+				04928ABD2770ECB80043D653 /* Roboto-Light.ttf in Resources */,
 				04C7DF142770A1390081BD0E /* Assets.xcassets in Resources */,
 				04C7DF122770A1380081BD0E /* Main.storyboard in Resources */,
 			);
