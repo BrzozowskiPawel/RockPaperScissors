@@ -13,7 +13,7 @@ class GuestViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     
-    var ID: String?
+    var joinID: String?
     var naviagtionControllerSetActive = false
     
     override func viewDidLoad() {
@@ -48,11 +48,16 @@ class GuestViewController: UIViewController {
         
     }
     
-    @IBAction func joinButtonPressed(_ sender: Any) {
-        if let ID_val = idTextField.text {
-            print(ID_val)
-            ID = ID_val
+    // Send provided JOIN id to chooseVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.JOIN_TO_CHOOSE {
+            if let chooseVC = segue.destination as? ChooseViewController {
+                chooseVC.ID = idTextField.text!
+            }
         }
+    }
+    
+    @IBAction func joinButtonPressed(_ sender: Any) {
     }
     
 }

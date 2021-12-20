@@ -42,6 +42,7 @@ class HostViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    // Send HOST id to chooseVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.HOST_TO_CHOOSE {
             if let chooseVC = segue.destination as? ChooseViewController {
