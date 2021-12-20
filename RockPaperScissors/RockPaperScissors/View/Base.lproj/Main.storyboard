@@ -58,6 +58,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Lfx-9D-N4g" kind="show" id="Jv0-fK-bpQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75Z-Xi-Wi4">
                                         <rect key="frame" x="151" y="0.0" width="121" height="49"/>
@@ -78,6 +81,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="CAY-jA-BSt" kind="show" id="JLq-q0-kA8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -110,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="c8j-Pf-yJC">
-                                <rect key="frame" x="88" y="44" width="238.5" height="300"/>
+                                <rect key="frame" x="88" y="88" width="238.5" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="XQU-3l-ccy"/>
                                 </constraints>
@@ -165,10 +171,14 @@
                             <constraint firstItem="TWl-5c-cUw" firstAttribute="centerX" secondItem="3za-gm-kcN" secondAttribute="centerX" id="yjL-b2-UNM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="veq-Be-D6E"/>
+                    <connections>
+                        <segue destination="QP8-DK-xwY" kind="show" identifier="GoToResultsVC" id="FgT-gM-nlI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc0-QT-3SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="837"/>
+            <point key="canvasLocation" x="2590" y="108"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="qJF-9Z-fht">
@@ -179,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-Us-QuN">
-                                <rect key="frame" x="82.5" y="44" width="249.5" height="260"/>
+                                <rect key="frame" x="82.5" y="88" width="249.5" height="260"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="CBK-NN-num"/>
                                 </constraints>
@@ -231,10 +241,11 @@
                             <constraint firstItem="eg6-rN-tvy" firstAttribute="centerX" secondItem="VqB-GK-BTR" secondAttribute="centerX" id="x9F-Ht-sVg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nGK-8K-yVf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvq-yY-Kei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="1558"/>
+            <point key="canvasLocation" x="3567" y="108"/>
         </scene>
         <!--Host View Controller-->
         <scene sceneID="Tq2-6x-xrW">
@@ -245,7 +256,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feN-YA-kmg">
-                                <rect key="frame" x="0.0" y="54" width="414" height="105.5"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="105.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -269,6 +280,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ba9-30-cPu" kind="show" id="URH-Bp-BHb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GAME ID: 8787" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-TF-rhP">
                                 <rect key="frame" x="77.5" y="649" width="259" height="49"/>
@@ -293,10 +307,11 @@
                             <constraint firstItem="dyk-hM-fs3" firstAttribute="centerX" secondItem="lm6-n4-N5k" secondAttribute="centerX" id="wxm-J0-EfD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JIg-S5-Xfb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuz-iA-AN6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955.072463768116" y="107.8125"/>
+            <point key="canvasLocation" x="1822" y="-221"/>
         </scene>
         <!--Guest View Controller-->
         <scene sceneID="YN6-SK-LdL">
@@ -307,7 +322,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbT-52-UzU">
-                                <rect key="frame" x="0.0" y="54" width="414" height="105.5"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="105.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -324,13 +339,16 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="JOIN">
                                             <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="18" name="Roboto-Light"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ba9-30-cPu" kind="show" id="UKM-GY-I0g"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TYPE GAME ID: " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-ao-8wE">
                                 <rect key="frame" x="77.5" y="649" width="259" height="49"/>
@@ -355,10 +373,11 @@
                             <constraint firstItem="YfA-Pe-cyC" firstAttribute="bottom" secondItem="yXu-ye-MOK" secondAttribute="bottom" constant="25" id="hXB-dz-Jyl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jNh-ro-LSX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ong-l6-Wf0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2834.7826086956525" y="107.8125"/>
+            <point key="canvasLocation" x="1823" y="430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cdC-cC-Xwg">
@@ -379,6 +398,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UKM-GY-I0g"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Paper" width="238.5" height="416"/>
         <image name="PaperButton" width="68.5" height="92"/>
