@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-2j-HmW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="105.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="105"/>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -289,12 +289,13 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Ba9-30-cPu" kind="show" id="URH-Bp-BHb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GAME ID: 8787" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-TF-rhP">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GAME ID: 8787, tap to change." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-TF-rhP">
                                 <rect key="frame" x="77.5" y="649" width="259" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="LqJ-jJ-Fxd"/>
@@ -302,6 +303,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="idTextFieldPressed:" destination="Lfx-9D-N4g" eventType="editingChanged" id="lfV-6f-Bj8"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="23j-YJ-Dhy"/>
@@ -318,6 +322,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JIg-S5-Xfb"/>
+                    <connections>
+                        <outlet property="IdTextField" destination="CS8-TF-rhP" id="T4K-CE-bNx"/>
+                        <outlet property="mainLabel" destination="feN-YA-kmg" id="Ikx-fE-f5E"/>
+                        <outlet property="startButton" destination="dyk-hM-fs3" id="N6w-Ec-QFz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuz-iA-AN6" sceneMemberID="firstResponder"/>
             </objects>

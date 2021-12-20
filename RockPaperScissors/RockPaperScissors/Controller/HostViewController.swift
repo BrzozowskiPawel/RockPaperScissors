@@ -8,22 +8,50 @@
 import UIKit
 
 class HostViewController: UIViewController {
-
+    
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var IdTextField: UITextField!
+    @IBOutlet weak var startButton: UIButton!
+    
+    var naviagtionControllerSetActive = false
+    var newID = String(Int.random(in: 1000...9999))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Properly formated main label text:
+        mainLabel.text = "ROCK \n / PAPAER / \n SCISSORS"
+        
+        // Set radius for both button and TextField:
+        startButton.layer.cornerRadius = 10
+        IdTextField.layer.cornerRadius = 20
+        
+        // Dispaly information about new random game ID:
+        IdTextField.placeholder = "GAME ID: \(newID), tap to change."
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Hide anvigation bar on apearing
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    */
 
+    // Set nagiation bar viible again for next screen
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
+    
+    // Set navigation bar visible again
+    @IBAction func idTextFieldPressed(_ sender: UITextField) {
+        // If this is pressed first time, show naviation controlelr bar
+        // If it's edited multipe times still show.
+        if !naviagtionControllerSetActive {
+            navigationController?.setNavigationBarHidden(false, animated: false)
+            naviagtionControllerSetActive = true
+        }
+        newID = sender.text!
+    }
+    
 }
