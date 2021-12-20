@@ -1,24 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lr8-of-LNz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Thin.ttf">
+            <string>Roboto-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-2j-HmW">
+                                <rect key="frame" x="0.0" y="98" width="414" height="105.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-XO-Td1">
+                                <rect key="frame" x="88" y="240" width="238.5" height="416"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zZf-qg-7jV">
+                                <rect key="frame" x="71" y="788" width="272" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxs-0w-2Da">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="49"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="X6z-7n-iSt"/>
+                                            <constraint firstAttribute="width" constant="121" id="yf0-qq-701"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="HOST">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Roboto-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75Z-Xi-Wi4">
+                                        <rect key="frame" x="151" y="0.0" width="121" height="49"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="WHv-Hh-a4t"/>
+                                            <constraint firstAttribute="width" constant="121" id="g0M-fq-0rs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="JOIN">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="18" name="Roboto-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.61176470588235299" green="0.15294117647058825" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zZf-qg-7jV" secondAttribute="bottom" constant="25" id="EB6-Cz-4sz"/>
+                            <constraint firstItem="zZf-qg-7jV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G5k-ky-XIh"/>
+                            <constraint firstItem="wlK-XO-Td1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H0k-nz-5Tv"/>
+                            <constraint firstItem="JbS-2j-HmW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LdN-wl-BaE"/>
+                            <constraint firstItem="wlK-XO-Td1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O6t-5m-FTt"/>
+                            <constraint firstAttribute="trailing" secondItem="JbS-2j-HmW" secondAttribute="trailing" id="ab6-Zf-Mgz"/>
+                            <constraint firstItem="JbS-2j-HmW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="bs0-a4-9P3"/>
+                            <constraint firstItem="JbS-2j-HmW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mtB-Az-KGy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="K5m-hf-OYs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="108.48214285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6y3-3O-Bqo">
+            <objects>
+                <viewController id="Ba9-30-cPu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3za-gm-kcN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="c8j-Pf-yJC">
+                                <rect key="frame" x="88" y="44" width="238.5" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="XQU-3l-ccy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S PLAY!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWl-5c-cUw">
+                                <rect key="frame" x="97.5" y="424.5" width="219.5" height="47"/>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UFb-8w-610">
+                                <rect key="frame" x="14" y="722" width="386" height="107"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8c-nF-uyv">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="107"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="RockButton">
+                                            <backgroundConfiguration key="background"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzx-Za-an3">
+                                        <rect key="frame" x="129.5" y="0.0" width="127" height="107"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="PaperButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Yd-WeX">
+                                        <rect key="frame" x="258.5" y="0.0" width="127.5" height="107"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ScissorsButton"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICK AN OPTION:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5q-Tw-4LE">
+                                <rect key="frame" x="137.5" y="685.5" width="139.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dhB-Pa-ryd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UFb-8w-610" firstAttribute="centerX" secondItem="3za-gm-kcN" secondAttribute="centerX" id="3et-LM-FGJ"/>
+                            <constraint firstItem="dhB-Pa-ryd" firstAttribute="trailing" secondItem="UFb-8w-610" secondAttribute="trailing" constant="14" id="CEK-dD-FCt"/>
+                            <constraint firstItem="dhB-Pa-ryd" firstAttribute="bottom" secondItem="UFb-8w-610" secondAttribute="bottom" constant="33" id="T6B-P9-iiH"/>
+                            <constraint firstItem="c8j-Pf-yJC" firstAttribute="top" secondItem="dhB-Pa-ryd" secondAttribute="top" id="eGI-Wj-Ugt"/>
+                            <constraint firstItem="UFb-8w-610" firstAttribute="top" secondItem="k5q-Tw-4LE" secondAttribute="bottom" constant="15" id="iFN-c7-Ndb"/>
+                            <constraint firstItem="TWl-5c-cUw" firstAttribute="centerY" secondItem="3za-gm-kcN" secondAttribute="centerY" id="kMS-4t-mGx"/>
+                            <constraint firstItem="UFb-8w-610" firstAttribute="leading" secondItem="dhB-Pa-ryd" secondAttribute="leading" constant="14" id="pHa-RG-5hL"/>
+                            <constraint firstItem="k5q-Tw-4LE" firstAttribute="centerX" secondItem="3za-gm-kcN" secondAttribute="centerX" id="vPB-Wo-2gz"/>
+                            <constraint firstItem="c8j-Pf-yJC" firstAttribute="centerX" secondItem="3za-gm-kcN" secondAttribute="centerX" id="y8N-CS-VEn"/>
+                            <constraint firstItem="TWl-5c-cUw" firstAttribute="centerX" secondItem="3za-gm-kcN" secondAttribute="centerX" id="yjL-b2-UNM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc0-QT-3SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="837"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qJF-9Z-fht">
+            <objects>
+                <viewController id="QP8-DK-xwY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VqB-GK-BTR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-Us-QuN">
+                                <rect key="frame" x="82.5" y="44" width="249.5" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="CBK-NN-num"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock" translatesAutoresizingMaskIntoConstraints="NO" id="cI7-li-s4b">
+                                <rect key="frame" x="82.5" y="602" width="249.5" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="3me-hl-u7T"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT'S A DRAW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9k-21-sgE">
+                                <rect key="frame" x="135.5" y="395.5" width="143" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-rN-tvy">
+                                <rect key="frame" x="143" y="430.5" width="128" height="35"/>
+                                <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="PLAY AGAIN">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Roboto-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ksG-8f-l1j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TVr-Us-QuN" firstAttribute="top" secondItem="ksG-8f-l1j" secondAttribute="top" id="Egc-mF-hlR"/>
+                            <constraint firstItem="cI7-li-s4b" firstAttribute="centerX" secondItem="VqB-GK-BTR" secondAttribute="centerX" id="T58-ig-hEa"/>
+                            <constraint firstItem="ksG-8f-l1j" firstAttribute="bottom" secondItem="cI7-li-s4b" secondAttribute="bottom" id="YPU-KE-w1N"/>
+                            <constraint firstItem="V9k-21-sgE" firstAttribute="centerX" secondItem="VqB-GK-BTR" secondAttribute="centerX" id="ahL-BZ-DQI"/>
+                            <constraint firstItem="eg6-rN-tvy" firstAttribute="top" secondItem="V9k-21-sgE" secondAttribute="bottom" constant="5" id="jYG-hU-zO6"/>
+                            <constraint firstItem="eg6-rN-tvy" firstAttribute="centerY" secondItem="VqB-GK-BTR" secondAttribute="centerY" id="p9C-GX-23b"/>
+                            <constraint firstItem="TVr-Us-QuN" firstAttribute="centerX" secondItem="VqB-GK-BTR" secondAttribute="centerX" id="sII-ub-5pU"/>
+                            <constraint firstItem="eg6-rN-tvy" firstAttribute="centerX" secondItem="VqB-GK-BTR" secondAttribute="centerX" id="x9F-Ht-sVg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvq-yY-Kei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="1558"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tq2-6x-xrW">
+            <objects>
+                <viewController id="Lfx-9D-N4g" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lm6-n4-N5k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feN-YA-kmg">
+                                <rect key="frame" x="0.0" y="54" width="414" height="105.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyk-hM-fs3">
+                                <rect key="frame" x="77.5" y="788" width="259" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="3Ng-BB-0Bq"/>
+                                    <constraint firstAttribute="width" constant="259" id="8N2-8I-kYL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="Roboto-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GAME ID: 8787" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-TF-rhP">
+                                <rect key="frame" x="77.5" y="649" width="259" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="LqJ-jJ-Fxd"/>
+                                    <constraint firstAttribute="width" constant="259" id="TIz-tI-5Yr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="23j-YJ-Dhy"/>
+                        <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="23j-YJ-Dhy" firstAttribute="bottom" secondItem="dyk-hM-fs3" secondAttribute="bottom" constant="25" id="CVy-Jr-bkN"/>
+                            <constraint firstItem="feN-YA-kmg" firstAttribute="leading" secondItem="lm6-n4-N5k" secondAttribute="leading" id="I4W-8z-aZx"/>
+                            <constraint firstItem="dyk-hM-fs3" firstAttribute="top" secondItem="CS8-TF-rhP" secondAttribute="bottom" constant="90" id="SlU-Mu-Mv7"/>
+                            <constraint firstItem="feN-YA-kmg" firstAttribute="top" secondItem="23j-YJ-Dhy" secondAttribute="top" constant="10" id="UW2-Ki-Y2i"/>
+                            <constraint firstItem="feN-YA-kmg" firstAttribute="centerX" secondItem="lm6-n4-N5k" secondAttribute="centerX" id="jWt-P8-Ju1"/>
+                            <constraint firstItem="CS8-TF-rhP" firstAttribute="centerX" secondItem="lm6-n4-N5k" secondAttribute="centerX" id="kny-dE-Rf1"/>
+                            <constraint firstAttribute="trailing" secondItem="feN-YA-kmg" secondAttribute="trailing" id="n58-q4-sFs"/>
+                            <constraint firstItem="dyk-hM-fs3" firstAttribute="centerX" secondItem="lm6-n4-N5k" secondAttribute="centerX" id="wxm-J0-EfD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuz-iA-AN6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="107.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YN6-SK-LdL">
+            <objects>
+                <viewController id="CAY-jA-BSt" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1E-mD-g6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbT-52-UzU">
+                                <rect key="frame" x="0.0" y="54" width="414" height="105.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXu-ye-MOK">
+                                <rect key="frame" x="77.5" y="788" width="259" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="eec-Rp-jYq"/>
+                                    <constraint firstAttribute="width" constant="259" id="poc-GM-NAS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="JOIN">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="18" name="Roboto-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TYPE GAME ID: " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-ao-8wE">
+                                <rect key="frame" x="77.5" y="649" width="259" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="AY0-oH-xaM"/>
+                                    <constraint firstAttribute="width" constant="259" id="uSu-Pe-q8M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YfA-Pe-cyC"/>
+                        <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lbT-52-UzU" firstAttribute="leading" secondItem="D1E-mD-g6Z" secondAttribute="leading" id="6T7-MM-eUM"/>
+                            <constraint firstItem="yXu-ye-MOK" firstAttribute="centerX" secondItem="D1E-mD-g6Z" secondAttribute="centerX" id="98X-zJ-fad"/>
+                            <constraint firstItem="lbT-52-UzU" firstAttribute="centerX" secondItem="D1E-mD-g6Z" secondAttribute="centerX" id="AFn-QA-sdm"/>
+                            <constraint firstItem="yXu-ye-MOK" firstAttribute="top" secondItem="hAT-ao-8wE" secondAttribute="bottom" constant="90" id="C98-Pz-RQp"/>
+                            <constraint firstItem="lbT-52-UzU" firstAttribute="top" secondItem="YfA-Pe-cyC" secondAttribute="top" constant="10" id="EX0-ec-oyZ"/>
+                            <constraint firstAttribute="trailing" secondItem="lbT-52-UzU" secondAttribute="trailing" id="HaB-1L-L4N"/>
+                            <constraint firstItem="hAT-ao-8wE" firstAttribute="centerX" secondItem="D1E-mD-g6Z" secondAttribute="centerX" id="cuh-8G-lNb"/>
+                            <constraint firstItem="YfA-Pe-cyC" firstAttribute="bottom" secondItem="yXu-ye-MOK" secondAttribute="bottom" constant="25" id="hXB-dz-Jyl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ong-l6-Wf0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834.7826086956525" y="107.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cdC-cC-Xwg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lr8-of-LNz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dZR-U4-STb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l7l-Uk-75q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLS-xm-z3P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Paper" width="238.5" height="416"/>
+        <image name="PaperButton" width="68.5" height="92"/>
+        <image name="Rock" width="249.5" height="322.5"/>
+        <image name="RockButton" width="68.5" height="75.5"/>
+        <image name="ScissorsButton" width="68.5" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -5,6 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Thin.ttf</string>
+		<string>Roboto-Black.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
