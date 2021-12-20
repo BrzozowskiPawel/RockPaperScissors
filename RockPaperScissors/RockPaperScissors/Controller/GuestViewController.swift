@@ -9,21 +9,21 @@ import UIKit
 
 class GuestViewController: UIViewController {
 
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var joinButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Properly formated main label text:
+        mainLabel.text = "ROCK \n / PAPAER / \n SCISSORS"
+        
+        // Set radius for both button and TextField:
+        joinButton.layer.cornerRadius = 10
+        idTextField.layer.cornerRadius = 20
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

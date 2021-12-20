@@ -393,6 +393,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jNh-ro-LSX"/>
+                    <connections>
+                        <outlet property="idTextField" destination="hAT-ao-8wE" id="sYD-RY-AHa"/>
+                        <outlet property="joinButton" destination="yXu-ye-MOK" id="Nwe-vb-UmA"/>
+                        <outlet property="mainLabel" destination="lbT-52-UzU" id="Y4k-Y3-F3P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ong-l6-Wf0" sceneMemberID="firstResponder"/>
             </objects>
