@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>238911021415-4j0fe98k4cjir6ibftbvo1htgvbhjadc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.238911021415-4j0fe98k4cjir6ibftbvo1htgvbhjadc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDtKgvYQzw9U_3PuMGfCwbbPHG4R1vQCW0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>238911021415</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pawelbrzozowski.RockPaperScissors</string>
+	<key>PROJECT_ID</key>
+	<string>rockpaperscissors-f069f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rockpaperscissors-f069f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:238911021415:ios:c8d44edcae2bac6f454fc2</string>
+</dict>
+</plist>
