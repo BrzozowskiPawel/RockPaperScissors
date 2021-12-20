@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="108.48214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose View Controller-->
         <scene sceneID="6y3-3O-Bqo">
             <objects>
-                <viewController id="Ba9-30-cPu" sceneMemberID="viewController">
+                <viewController id="Ba9-30-cPu" customClass="ChooseViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3za-gm-kcN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="1048" y="837"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="qJF-9Z-fht">
             <objects>
-                <viewController id="QP8-DK-xwY" sceneMemberID="viewController">
+                <viewController id="QP8-DK-xwY" customClass="ResultViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VqB-GK-BTR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,15 +191,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT'S A DRAW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9k-21-sgE">
-                                <rect key="frame" x="135.5" y="395.5" width="143" height="30"/>
+                                <rect key="frame" x="135.5" y="390" width="143" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-rN-tvy">
-                                <rect key="frame" x="143" y="430.5" width="128" height="35"/>
+                                <rect key="frame" x="115" y="425" width="184" height="46"/>
                                 <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="7ql-2f-oQL"/>
+                                    <constraint firstAttribute="width" constant="184" id="NSy-QA-Rsn"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -232,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="1068" y="1558"/>
         </scene>
-        <!--View Controller-->
+        <!--Host View Controller-->
         <scene sceneID="Tq2-6x-xrW">
             <objects>
-                <viewController id="Lfx-9D-N4g" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lfx-9D-N4g" customClass="HostViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lm6-n4-N5k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="1955.072463768116" y="107.8125"/>
         </scene>
-        <!--View Controller-->
+        <!--Guest View Controller-->
         <scene sceneID="YN6-SK-LdL">
             <objects>
-                <viewController id="CAY-jA-BSt" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CAY-jA-BSt" customClass="GuestViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1E-mD-g6Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
