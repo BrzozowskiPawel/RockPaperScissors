@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var hostButton: UIButton!
     @IBOutlet weak var joinButton: UIButton!
     
+    var ID: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROCK / PAPAER / SCISSORS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-2j-HmW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="105.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Ba9-30-cPu" kind="show" id="URH-Bp-BHb"/>
+                                    <segue destination="Ba9-30-cPu" kind="show" identifier="HostToChoose" id="URH-Bp-BHb"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GAME ID: 8787, tap to change." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-TF-rhP">
@@ -366,7 +366,8 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Ba9-30-cPu" kind="show" id="UKM-GY-I0g"/>
+                                    <action selector="joinButtonPressed:" destination="CAY-jA-BSt" eventType="touchUpInside" id="bm5-Jk-B2K"/>
+                                    <segue destination="Ba9-30-cPu" kind="show" identifier="JoinToChoose" id="UKM-GY-I0g"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TYPE GAME ID: " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-ao-8wE">
@@ -377,6 +378,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="edditingTextField:" destination="CAY-jA-BSt" eventType="editingChanged" id="P5X-Cy-BS3"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YfA-Pe-cyC"/>
@@ -423,7 +427,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UKM-GY-I0g"/>
+        <segue reference="URH-Bp-BHb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Paper" width="238.5" height="416"/>

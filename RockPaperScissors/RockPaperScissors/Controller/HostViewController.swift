@@ -42,8 +42,15 @@ class HostViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.HOST_TO_CHOOSE {
+            if let chooseVC = segue.destination as? ChooseViewController {
+                chooseVC.ID = newID
+            }
+        }
+    }
     
-    // Set navigation bar visible again
+    // Set navigation bar visible again and set new ID
     @IBAction func idTextFieldPressed(_ sender: UITextField) {
         // If this is pressed first time, show naviation controlelr bar
         // If it's edited multipe times still show.
