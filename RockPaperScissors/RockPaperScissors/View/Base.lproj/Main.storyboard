@@ -247,6 +247,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgianButtonPressed:" destination="QP8-DK-xwY" eventType="touchUpInside" id="drJ-pJ-OlZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ksG-8f-l1j"/>

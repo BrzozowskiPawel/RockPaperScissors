@@ -104,6 +104,15 @@ class ResultViewController: UIViewController {
             }
         }
     }
+    
+    
+    
+    @IBAction func playAgianButtonPressed(_ sender: Any) {
+        let appDelegate = AppDelegate()
+        appDelegate.resetApp()
+    }
+    
+    
     /*
     // MARK: - Navigation
 

@@ -21,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    // Additional function to restart app
+    func resetApp() {
+        UIApplication.shared.windows[0].rootViewController = UIStoryboard(
+            name: "Main",
+            bundle: nil
+            ).instantiateInitialViewController()
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
