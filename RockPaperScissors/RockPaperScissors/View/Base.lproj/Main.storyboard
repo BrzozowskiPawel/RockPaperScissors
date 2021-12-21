@@ -146,16 +146,25 @@
                                         <buttonConfiguration key="configuration" style="plain" image="RockButton">
                                             <backgroundConfiguration key="background"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="moveButtonTapped:" destination="Ba9-30-cPu" eventType="touchUpInside" id="7DE-C4-YvA"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzx-Za-an3">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzx-Za-an3">
                                         <rect key="frame" x="129.5" y="0.0" width="127" height="107"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="PaperButton"/>
+                                        <connections>
+                                            <action selector="moveButtonTapped:" destination="Ba9-30-cPu" eventType="touchUpInside" id="GYQ-rC-BcN"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Yd-WeX">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Yd-WeX">
                                         <rect key="frame" x="258.5" y="0.0" width="127.5" height="107"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ScissorsButton"/>
+                                        <connections>
+                                            <action selector="moveButtonTapped:" destination="Ba9-30-cPu" eventType="touchUpInside" id="gT9-TV-eWf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -427,7 +436,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="URH-Bp-BHb"/>
+        <segue reference="UKM-GY-I0g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Paper" width="238.5" height="416"/>

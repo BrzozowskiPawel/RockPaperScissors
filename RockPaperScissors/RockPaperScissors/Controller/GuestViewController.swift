@@ -53,6 +53,7 @@ class GuestViewController: UIViewController {
         if segue.identifier == Constants.JOIN_TO_CHOOSE {
             if let chooseVC = segue.destination as? ChooseViewController {
                 chooseVC.ID = idTextField.text!
+                chooseVC.user = "GUEST"
             }
         }
     }

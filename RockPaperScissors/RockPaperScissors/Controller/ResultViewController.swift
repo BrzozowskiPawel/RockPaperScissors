@@ -9,10 +9,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    // Results: ex guest - lost, host - won (or NOWINNER)
+    var guest: String?
+    var host: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("‼️ FINAL RESULTS host: \(host), guest: \(guest)")
     }
     
 

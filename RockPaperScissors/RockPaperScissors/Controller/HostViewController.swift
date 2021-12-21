@@ -47,6 +47,7 @@ class HostViewController: UIViewController {
         if segue.identifier == Constants.HOST_TO_CHOOSE {
             if let chooseVC = segue.destination as? ChooseViewController {
                 chooseVC.ID = newID
+                chooseVC.user = "HOST"
             }
         }
     }
