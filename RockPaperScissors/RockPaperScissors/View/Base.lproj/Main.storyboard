@@ -192,6 +192,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="veq-Be-D6E"/>
                     <connections>
+                        <outlet property="pickOptionLabel" destination="k5q-Tw-4LE" id="59O-pU-3uY"/>
                         <outlet property="topImage" destination="c8j-Pf-yJC" id="yd6-F0-JYn"/>
                         <segue destination="QP8-DK-xwY" kind="show" identifier="GoToResultsVC" id="FgT-gM-nlI"/>
                     </connections>
@@ -448,7 +449,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UKM-GY-I0g"/>
+        <segue reference="URH-Bp-BHb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Paper" width="238.5" height="416"/>

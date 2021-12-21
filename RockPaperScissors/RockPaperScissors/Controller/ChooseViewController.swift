@@ -11,6 +11,7 @@ import Firebase
 class ChooseViewController: UIViewController {
 
     @IBOutlet weak var topImage: UIImageView!
+    @IBOutlet weak var pickOptionLabel: UILabel!
     
     var ID:String?
     var user: String? // Host or Guest
@@ -166,10 +167,13 @@ class ChooseViewController: UIViewController {
         switch sender.tag {
         case 0:
             sendChoosenMove(move: "ROCK")
+            pickOptionLabel.text = "PICKED ROCK"
         case 1:
             sendChoosenMove(move: "PAPER")
+            pickOptionLabel.text = "PICKED PAPER"
         case 2:
             sendChoosenMove(move: "SCISSORS")
+            pickOptionLabel.text = "PICKED SCISSORS"
         default:
             print("SWITCH ERROR")
         }
