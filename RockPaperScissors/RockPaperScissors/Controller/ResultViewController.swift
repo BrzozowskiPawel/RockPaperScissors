@@ -68,11 +68,11 @@ class ResultViewController: UIViewController {
             }
             switch guestMove {
             case "ROCK":
-                topImage.image = UIImage(named: "Rock.png")
+                topImage.image = UIImage(named: "RockUpside.png")
             case "PAPER":
-                topImage.image = UIImage(named: "Paper.png")
+                topImage.image = UIImage(named: "PaperUpside.png")
             case "SCISSORS":
-                topImage.image = UIImage(named: "Scissors.png")
+                topImage.image = UIImage(named: "ScissorsUpside.png")
             default:
                 return
             }
@@ -81,11 +81,11 @@ class ResultViewController: UIViewController {
         else if user == "GUEST" {
             switch hostMove {
             case "ROCK":
-                topImage.image = UIImage(named: "Rock.png")
+                topImage.image = UIImage(named: "RockUpside.png")
             case "PAPER":
-                topImage.image = UIImage(named: "Paper.png")
+                topImage.image = UIImage(named: "PaperUpside.png")
             case "SCISSORS":
-                topImage.image = UIImage(named: "Scissors.png")
+                topImage.image = UIImage(named: "ScissorsUpside.png")
             default:
                 return
             }

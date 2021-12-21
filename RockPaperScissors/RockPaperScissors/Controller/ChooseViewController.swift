@@ -10,6 +10,8 @@ import Firebase
 
 class ChooseViewController: UIViewController {
 
+    @IBOutlet weak var topImage: UIImageView!
+    
     var ID:String?
     var user: String? // Host or Guest
     let db = Firestore.firestore()
@@ -22,8 +24,7 @@ class ChooseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(ID)
+        
     }
     
 
