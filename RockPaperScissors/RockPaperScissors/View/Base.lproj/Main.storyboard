@@ -293,7 +293,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyk-hM-fs3">
-                                <rect key="frame" x="77.5" y="788" width="259" height="49"/>
+                                <rect key="frame" x="77.5" y="423.5" width="259" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="3Ng-BB-0Bq"/>
@@ -317,7 +317,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GAME ID: 8787, tap to change." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CS8-TF-rhP">
-                                <rect key="frame" x="77.5" y="649" width="259" height="49"/>
+                                <rect key="frame" x="77.5" y="339.5" width="259" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="LqJ-jJ-Fxd"/>
                                     <constraint firstAttribute="width" constant="259" id="TIz-tI-5Yr"/>
@@ -332,10 +332,10 @@
                         <viewLayoutGuide key="safeArea" id="23j-YJ-Dhy"/>
                         <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="23j-YJ-Dhy" firstAttribute="bottom" secondItem="dyk-hM-fs3" secondAttribute="bottom" constant="25" id="CVy-Jr-bkN"/>
+                            <constraint firstItem="dyk-hM-fs3" firstAttribute="centerY" secondItem="lm6-n4-N5k" secondAttribute="centerY" id="HTf-kE-l1C"/>
                             <constraint firstItem="feN-YA-kmg" firstAttribute="leading" secondItem="lm6-n4-N5k" secondAttribute="leading" id="I4W-8z-aZx"/>
-                            <constraint firstItem="dyk-hM-fs3" firstAttribute="top" secondItem="CS8-TF-rhP" secondAttribute="bottom" constant="90" id="SlU-Mu-Mv7"/>
                             <constraint firstItem="feN-YA-kmg" firstAttribute="top" secondItem="23j-YJ-Dhy" secondAttribute="top" constant="10" id="UW2-Ki-Y2i"/>
+                            <constraint firstItem="dyk-hM-fs3" firstAttribute="top" secondItem="CS8-TF-rhP" secondAttribute="bottom" constant="35" id="WdL-YA-eh2"/>
                             <constraint firstItem="feN-YA-kmg" firstAttribute="centerX" secondItem="lm6-n4-N5k" secondAttribute="centerX" id="jWt-P8-Ju1"/>
                             <constraint firstItem="CS8-TF-rhP" firstAttribute="centerX" secondItem="lm6-n4-N5k" secondAttribute="centerX" id="kny-dE-Rf1"/>
                             <constraint firstAttribute="trailing" secondItem="feN-YA-kmg" secondAttribute="trailing" id="n58-q4-sFs"/>
@@ -368,7 +368,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXu-ye-MOK">
-                                <rect key="frame" x="77.5" y="788" width="259" height="49"/>
+                                <rect key="frame" x="77.5" y="423.5" width="259" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="eec-Rp-jYq"/>
@@ -393,7 +393,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TYPE GAME ID: " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-ao-8wE">
-                                <rect key="frame" x="77.5" y="649" width="259" height="49"/>
+                                <rect key="frame" x="77.5" y="339.5" width="259" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="AY0-oH-xaM"/>
                                     <constraint firstAttribute="width" constant="259" id="uSu-Pe-q8M"/>
@@ -411,11 +411,11 @@
                             <constraint firstItem="lbT-52-UzU" firstAttribute="leading" secondItem="D1E-mD-g6Z" secondAttribute="leading" id="6T7-MM-eUM"/>
                             <constraint firstItem="yXu-ye-MOK" firstAttribute="centerX" secondItem="D1E-mD-g6Z" secondAttribute="centerX" id="98X-zJ-fad"/>
                             <constraint firstItem="lbT-52-UzU" firstAttribute="centerX" secondItem="D1E-mD-g6Z" secondAttribute="centerX" id="AFn-QA-sdm"/>
-                            <constraint firstItem="yXu-ye-MOK" firstAttribute="top" secondItem="hAT-ao-8wE" secondAttribute="bottom" constant="90" id="C98-Pz-RQp"/>
                             <constraint firstItem="lbT-52-UzU" firstAttribute="top" secondItem="YfA-Pe-cyC" secondAttribute="top" constant="10" id="EX0-ec-oyZ"/>
                             <constraint firstAttribute="trailing" secondItem="lbT-52-UzU" secondAttribute="trailing" id="HaB-1L-L4N"/>
+                            <constraint firstItem="yXu-ye-MOK" firstAttribute="centerY" secondItem="D1E-mD-g6Z" secondAttribute="centerY" id="Yt8-5X-jHk"/>
                             <constraint firstItem="hAT-ao-8wE" firstAttribute="centerX" secondItem="D1E-mD-g6Z" secondAttribute="centerX" id="cuh-8G-lNb"/>
-                            <constraint firstItem="YfA-Pe-cyC" firstAttribute="bottom" secondItem="yXu-ye-MOK" secondAttribute="bottom" constant="25" id="hXB-dz-Jyl"/>
+                            <constraint firstItem="yXu-ye-MOK" firstAttribute="top" secondItem="hAT-ao-8wE" secondAttribute="bottom" constant="35" id="uys-1h-XNI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jNh-ro-LSX"/>
@@ -449,7 +449,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="URH-Bp-BHb"/>
+        <segue reference="UKM-GY-I0g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Paper" width="238.5" height="416"/>
