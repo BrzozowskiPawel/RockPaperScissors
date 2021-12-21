@@ -8,9 +8,10 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
-    @IBOutlet weak var guestTopImage: UIImageView!
-    @IBOutlet weak var thisUserBottomImage: UIImageView!
+    
+    @IBOutlet weak var topImage: UIImageView!
+    @IBOutlet weak var bottomImage: UIImageView!
+    
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var resultsRebel: UILabel!
     
@@ -30,10 +31,11 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("‼️ FINAL RESULTS: USER: \(user) host: \(hostResult), guest: \(guestResult)")
         
-        setUpResultsLabel()
+        setUpResults()
+        setUpPictures()
     }
    
-    func setUpResultsLabel() {
+    func setUpResults() {
         if user == "HOST" && hostResult == "WON" {
             // This user won
             resultsRebel.text = "YOU WON ♥️"
@@ -52,6 +54,53 @@ class ResultViewController: UIViewController {
         }
     }
     
+    func setUpPictures() {
+        if user == "HOST" {
+            switch hostMove {
+            case "ROCK":
+                bottomImage.image = UIImage(named: "Rock.png")
+            case "PAPER":
+                bottomImage.image = UIImage(named: "Paper.png")
+            case "SCISSORS":
+                bottomImage.image = UIImage(named: "Scissors.png")
+            default:
+                return
+            }
+            switch guestMove {
+            case "ROCK":
+                topImage.image = UIImage(named: "Rock.png")
+            case "PAPER":
+                topImage.image = UIImage(named: "Paper.png")
+            case "SCISSORS":
+                topImage.image = UIImage(named: "Scissors.png")
+            default:
+                return
+            }
+        }
+        
+        else if user == "GUEST" {
+            switch hostMove {
+            case "ROCK":
+                topImage.image = UIImage(named: "Rock.png")
+            case "PAPER":
+                topImage.image = UIImage(named: "Paper.png")
+            case "SCISSORS":
+                topImage.image = UIImage(named: "Scissors.png")
+            default:
+                return
+            }
+            switch guestMove {
+            case "ROCK":
+                bottomImage.image = UIImage(named: "Rock.png")
+            case "PAPER":
+                bottomImage.image = UIImage(named: "Paper.png")
+            case "SCISSORS":
+                bottomImage.image = UIImage(named: "Scissors.png")
+            default:
+                return
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

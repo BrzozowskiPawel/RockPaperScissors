@@ -262,10 +262,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="nGK-8K-yVf"/>
                     <connections>
-                        <outlet property="guestTopImage" destination="TVr-Us-QuN" id="HjW-RK-ZB8"/>
+                        <outlet property="bottomImage" destination="cI7-li-s4b" id="Ss9-Rs-hRi"/>
                         <outlet property="playAgainButton" destination="eg6-rN-tvy" id="wkH-oJ-fvv"/>
                         <outlet property="resultsRebel" destination="V9k-21-sgE" id="txR-Pa-lHs"/>
-                        <outlet property="thisUserBottomImage" destination="cI7-li-s4b" id="WAy-Ug-Jl0"/>
+                        <outlet property="topImage" destination="TVr-Us-QuN" id="8Cr-Q5-Irs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvq-yY-Kei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
