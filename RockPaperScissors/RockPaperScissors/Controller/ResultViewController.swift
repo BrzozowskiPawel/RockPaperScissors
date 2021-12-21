@@ -106,6 +106,17 @@ class ResultViewController: UIViewController {
     }
     
     
+    // Hide anvigation bar on apearing
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    // Set nagiation bar viible again for next screen
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     @IBAction func playAgianButtonPressed(_ sender: Any) {
         let appDelegate = AppDelegate()
