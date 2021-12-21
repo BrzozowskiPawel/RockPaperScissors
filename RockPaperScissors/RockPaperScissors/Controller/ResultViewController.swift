@@ -31,6 +31,9 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("‼️ FINAL RESULTS: USER: \(user) host: \(hostResult), guest: \(guestResult)")
         
+        playAgainButton.layer.cornerRadius = 10
+        
+        
         setUpResults()
         setUpPictures()
     }
