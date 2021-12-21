@@ -261,6 +261,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nGK-8K-yVf"/>
+                    <connections>
+                        <outlet property="guestTopImage" destination="TVr-Us-QuN" id="HjW-RK-ZB8"/>
+                        <outlet property="playAgainButton" destination="eg6-rN-tvy" id="wkH-oJ-fvv"/>
+                        <outlet property="resultsRebel" destination="V9k-21-sgE" id="txR-Pa-lHs"/>
+                        <outlet property="thisUserBottomImage" destination="cI7-li-s4b" id="WAy-Ug-Jl0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvq-yY-Kei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -436,7 +442,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UKM-GY-I0g"/>
+        <segue reference="URH-Bp-BHb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Paper" width="238.5" height="416"/>

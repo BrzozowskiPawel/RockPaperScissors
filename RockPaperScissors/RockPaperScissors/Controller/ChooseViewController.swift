@@ -17,6 +17,9 @@ class ChooseViewController: UIViewController {
     var hostResult: String?
     var guestResult: String?
     
+    var guestMove: String?
+    var hostMove: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,8 +31,11 @@ class ChooseViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.RESULT_SEGUE {
             if let resultsVC = segue.destination as? ResultViewController {
-                resultsVC.guest = guestResult
-                resultsVC.host = hostResult
+                resultsVC.guestResult = guestResult
+                resultsVC.hostResult = hostResult
+                resultsVC.guestMove = guestMove
+                resultsVC.hostMove = hostMove
+                resultsVC.user = user
             }
         }
     }
@@ -78,52 +84,51 @@ class ChooseViewController: UIViewController {
                 // No error, we have snapshot and data
                 print("RESULTS OF GAME: ")
                 print(docSpanshot!.data())
-                let hostMove = docSpanshot!.data()!["HOST"] as! String
-                print(hostMove)
-                let guestMove = docSpanshot!.data()!["GUEST"] as! String
+                self.hostMove = docSpanshot!.data()!["HOST"] as! String
+                self.guestMove = docSpanshot!.data()!["GUEST"] as! String
                 
-                if hostMove == "ROCK" && guestMove == "PAPER" {
+                if self.hostMove == "ROCK" && self.guestMove == "PAPER" {
                     // Host lost
                     self.hostResult = "LOST"
                     self.guestResult = "WON"
                 }
-                else if hostMove == "PAPER" && guestMove == "SCISSORS" {
+                else if self.hostMove == "PAPER" && self.guestMove == "SCISSORS" {
                     // Host lost
                     self.hostResult = "LOST"
                     self.guestResult = "WON"
                 }
-                else if hostMove == "SCISSORS" && guestMove == "ROCK" {
+                else if self.hostMove == "SCISSORS" && self.guestMove == "ROCK" {
                     // Host lost
                     self.hostResult = "LOST"
                     self.guestResult = "WON"
                 }
-                else if hostMove == "ROCK" && guestMove == "SCISSORS" {
+                else if self.hostMove == "ROCK" && self.guestMove == "SCISSORS" {
                     // Host won
                     self.hostResult = "WON"
                     self.guestResult = "LOST"
                 }
-                else if hostMove == "PAPER" && guestMove == "ROCK" {
+                else if self.hostMove == "PAPER" && self.guestMove == "ROCK" {
                     // Host won
                     self.hostResult = "WON"
                     self.guestResult = "LOST"
                 }
-                else if hostMove == "SCISSORS" && guestMove == "PAPER" {
+                else if self.hostMove == "SCISSORS" && self.guestMove == "PAPER" {
                     // Host won
                     self.hostResult = "WON"
                     self.guestResult = "LOST"
                 }
-                else if hostMove == "ROCK" && guestMove == "ROCK" {
+                else if self.hostMove == "ROCK" && self.guestMove == "ROCK" {
                     // NO winner
                     self.hostResult = "NOWINNER"
                     self.guestResult = "NOWINNER"
                 }
                 
-                else if hostMove == "PAPER" && guestMove == "PAPER" {
+                else if self.hostMove == "PAPER" && self.guestMove == "PAPER" {
                     // No winer
                     self.hostResult = "NOWINNER"
                     self.guestResult = "NOWINNER"
                 }
-                else if hostMove == "SCISSORS" && guestMove == "SCISSORS" {
+                else if self.hostMove == "SCISSORS" && self.guestMove == "SCISSORS" {
                     // No winner
                     self.hostResult = "NOWINNER"
                     self.guestResult = "NOWINNER"
