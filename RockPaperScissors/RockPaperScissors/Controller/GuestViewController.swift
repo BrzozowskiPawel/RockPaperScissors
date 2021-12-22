@@ -13,7 +13,10 @@ class GuestViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     
+    // Join id provided by user from textField
     var joinID: String?
+    // Variable responsible for showing navigation bar when user is editing
+    // It make sure that trigering to show nav. bar will be fired only once.
     var naviagtionControllerSetActive = false
     
     override func viewDidLoad() {
@@ -40,6 +43,7 @@ class GuestViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    // When GUEST is editing textField show him option to go back via navigation controller
     @IBAction func edditingTextField(_ sender: Any) {
         if !naviagtionControllerSetActive {
             navigationController?.setNavigationBarHidden(false, animated: false)
@@ -52,12 +56,14 @@ class GuestViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.JOIN_TO_CHOOSE {
             if let chooseVC = segue.destination as? ChooseViewController {
+                // Send data about gameID and that the next screen have been triggered GUEST
                 chooseVC.ID = idTextField.text!
                 chooseVC.user = "GUEST"
             }
         }
     }
     
+    // Code when GUEST press join button
     @IBAction func joinButtonPressed(_ sender: Any) {
     }
     
