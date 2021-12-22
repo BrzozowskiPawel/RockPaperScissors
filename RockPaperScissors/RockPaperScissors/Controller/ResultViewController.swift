@@ -11,19 +11,18 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var bottomImage: UIImageView!
-    
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var resultsRebel: UILabel!
     
-    // Results: ex guest - lost, host - won (or NOWINNER)
+    // Results: ex guest - lost, host - won (or NOWINNER), send form previous screen
     var guestResult: String?
     var hostResult: String?
     
+    // Data passed from previous screen about what move have HOST/GUEST choosen
     var guestMove: String?
     var hostMove: String?
 
-    // Who is user (host or guest)
-    var user: String?
+    var user: String? // Who is this current user user (host or guest).
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +30,15 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("‼️ FINAL RESULTS: USER: \(user) host: \(hostResult), guest: \(guestResult)")
         
+        // Set radius for button
         playAgainButton.layer.cornerRadius = 10
         
-        
+        // Setup label and pictures to dispaly properly
         setUpResults()
         setUpPictures()
     }
    
+    // Settingup who has won and changing label text to match it
     func setUpResults() {
         if user == "HOST" && hostResult == "WON" {
             // This user won
@@ -57,6 +58,7 @@ class ResultViewController: UIViewController {
         }
     }
     
+    // Setting up proper image for each player (on the bottom is always this phone user)
     func setUpPictures() {
         if user == "HOST" {
             switch hostMove {
@@ -105,7 +107,6 @@ class ResultViewController: UIViewController {
         }
     }
     
-    
     // Hide anvigation bar on apearing
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -118,20 +119,10 @@ class ResultViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    // Reseting game if usser press "play again" button
     @IBAction func playAgianButtonPressed(_ sender: Any) {
         let appDelegate = AppDelegate()
         appDelegate.resetApp()
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
