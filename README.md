@@ -21,8 +21,6 @@ Here are the main features includes in it:
 ## Game with own game ID
 <img src="readme_files/own_gameid.gif" alt="autoid" width="752"/> </br>
 
-## Future improvments:
-- I will clear the code and add comments 
 
 </br></br></br>
 Made with ♥️ in Swift.
