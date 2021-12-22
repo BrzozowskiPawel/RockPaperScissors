@@ -13,26 +13,27 @@ class ChooseViewController: UIViewController {
     @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var pickOptionLabel: UILabel!
     
-    var ID:String?
-    var user: String? // Host or Guest
-    let db = Firestore.firestore()
+    var ID:String?                  // ID sended by previous screen
+    var user: String?               // Host or Guest value sended by previous screen
+    let db = Firestore.firestore()  // Reference to Firestor
     
-    var hostResult: String?
-    var guestResult: String?
     
-    var guestMove: String?
-    var hostMove: String?
+    var hostResult: String?         // Results of game for between HOST and GUEST are saved here (WON OR LOST)
+    var guestResult: String?        // Results of game for between HOST and GUEST are saved here (WON OR LOST)
+    
+    var guestMove: String?          // Local variable used to store what type of move has GUEST choosen
+    var hostMove: String?           // Local variable used to store what type of move has HOST choosen
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
 
     // Send results to resultsVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.RESULT_SEGUE {
             if let resultsVC = segue.destination as? ResultViewController {
+                // Send data to results screen
                 resultsVC.guestResult = guestResult
                 resultsVC.hostResult = hostResult
                 resultsVC.guestMove = guestMove
@@ -54,27 +55,21 @@ class ChooseViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
+    // When user choose move this function is fired.
+    // Sending info that user choosen his/hers move
     func sendUserReadyToUserCollection() {
         // Generating collection <rand id> add adding user to the <users> documnet
         db.collection(ID!).document("users").setData([user!:"ready"], merge: true)
     }
     
+    // Send type of move that this user have choosen to the DB
     func sendChoosenMove(move: String) {
         // Generating collection <rand id> add adding choosen move to the <moves> documnet
         db.collection(ID!).document("moves").setData([user!:move], merge: true)
     }
     
-    
+    // Set listener to be informed when 2 players are ready (have choosen moves).
+    // When both players are ready fire checkWhoWOn()
     func setListenerForSecondPlayerMove() {
         // Listening for changes in "users"
         db.collection(ID!).document("users").addSnapshotListener { docSnapshot, error in
@@ -91,16 +86,20 @@ class ChooseViewController: UIViewController {
         }
     }
     
+    // Function that is fired when both GUEST and HOST are ready (have choosen moves) by Listener function.
+    // Checking who have won - HOST or GUEST and send the results to result screen via prepare function.
     func checkWhoWon() {
-        print("CHECKING MOVES")
         db.collection(ID!).document("moves").getDocument { docSpanshot, error in
             if error == nil && docSpanshot != nil && docSpanshot!.data() != nil{
                 // No error, we have snapshot and data
                 print("RESULTS OF GAME: ")
                 print(docSpanshot!.data())
+                
+                // Save what moves have they choosen
                 self.hostMove = docSpanshot!.data()!["HOST"] as! String
                 self.guestMove = docSpanshot!.data()!["GUEST"] as! String
                 
+                // Bassing on results decide who have won
                 if self.hostMove == "ROCK" && self.guestMove == "PAPER" {
                     // Host lost
                     self.hostResult = "LOST"
@@ -148,6 +147,7 @@ class ChooseViewController: UIViewController {
                     self.guestResult = "NOWINNER"
                 }
                 
+                // When results are known and all data set perform segue to results screen
                 self.performSegue(withIdentifier: Constants.RESULT_SEGUE, sender: nil)
                 
             } else {
@@ -156,14 +156,18 @@ class ChooseViewController: UIViewController {
         }
     }
     
-    
+    // Buttons witch type of move
     @IBAction func moveButtonTapped(_ sender: UIButton) {
         // Tag list:
         // 0 - rock
         // 1 - paper
         // 2 - scissors
-        print("USER PRESSED")
+        
+        // Mark this user (HOST or GUEST) as ready
         sendUserReadyToUserCollection()
+        
+        // Decide which of 3 buttons have been choosen
+        // Fire function to save choosen move to the DB
         switch sender.tag {
         case 0:
             sendChoosenMove(move: "ROCK")
@@ -177,6 +181,9 @@ class ChooseViewController: UIViewController {
         default:
             print("SWITCH ERROR")
         }
+        
+        // Activate listeners when both players are ready
+        // only then showing next screen is possible
         setListenerForSecondPlayerMove()
     }
     
