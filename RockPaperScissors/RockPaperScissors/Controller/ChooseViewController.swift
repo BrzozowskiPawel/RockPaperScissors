@@ -81,7 +81,7 @@ class ChooseViewController: UIViewController {
                     self.checkWhoWon()
                 }
             } else {
-                print("ERROR with lsitener: \(error)")
+                print("ERROR with lsitener: \(String(describing: error))")
             }
         }
     }
@@ -93,7 +93,7 @@ class ChooseViewController: UIViewController {
             if error == nil && docSpanshot != nil && docSpanshot!.data() != nil{
                 // No error, we have snapshot and data
                 print("RESULTS OF GAME: ")
-                print(docSpanshot!.data())
+                print(docSpanshot!.data()!)
                 
                 // Save what moves have they choosen
                 self.hostMove = docSpanshot!.data()!["HOST"] as! String
